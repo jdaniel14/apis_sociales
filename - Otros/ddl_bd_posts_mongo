@@ -1,0 +1,41 @@
+1. Tabla de Post (PostPublicaciones / PostOpiniones
+{
+	"_id": "(long) mongo ID",
+	"post_id": "(number) Id del post ",
+	"post_creation_date": "(date) Fecha registro del post",
+	"post_network": "(byte) red social donde se publico  (1-twitter,2-instagram,3-facebook)",
+	"post_source": "(string) dispositivo/app desde donde se publico  (source->twitter)",
+	"post_url":  "(string) url del post en network origen",
+	"post_text": "(string) Texto del post: (text->twitter)",
+	"post_language": "(string) Lenguaje (en,es,de,un)",
+	"post_hashtags": "(string[]) arreglo de textos de hashtag",
+	"post_user_owner": {
+		"user_owner_id": "(number) usuario id",
+		"user_owner_screen_name": "(string) usuario nombre en pantalla",
+		"user_owner_url": "(string) link a página de usuario",
+		"user_owner_images": {
+	      		"POR DEFINIR":""
+		}
+	},
+	"post_attach": [
+	    "POR DEFINIR": ""
+	],
+	"post_report_status" : (integer) (0=SinReportar;1=Reportado;3=Verificado)
+}
+FALTA LOS USUARIOS INVOLUCRADOS								|
+FALTA LOS LINKS A LOS QUE SE HACE REFERENCIA EN EL POST		|============> Hay que definir que se va hacer cuando tengamos estos links
+FALTA LOS EXTENDED_ENTITIES QUE ESTAN INVOLUCRADOS que al final seran las fotos que mostraremos
+SOLO PARA TENER ALGO MAS, YO PROPONGO QUE SI EN UN COMENTARIO ESTA EL NOMBRADO EL USUARIO EN CUESTION DEBERIAMOS GUARDAR EL TWEET Y MOSTRARLO:
+	https://twitter.com/Agus_Murs/status/418137264557154304
+	RT @Agus_Murs: Nochevieja en @theknifemadrid http://t.co/RChjHdKxPB	
+	RECORDEMOS QUE CAMBIA EN ESTE PUNTO HAY DOS ID'S : UNO DEL TWEET ORIGINAL, OTRO DEL RETWEETEADO
+	
+
+2. Tabla de Reporte (ReportPublicaciones / ReportOpiniones
+
+{
+	"post_report_status": (integer) (0=SinReportar;1=Reportado;3=Verificado),
+	"post_report_user_id": (long) (0=SinReportar;1=Reportado;3=Verificado),
+	"post_report_date": (date) (0=SinReportar;1=Reportado;3=Verificado),
+	"post_id_mongo:  "(long) id de post en mongo",
+}

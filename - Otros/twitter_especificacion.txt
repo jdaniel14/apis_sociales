@@ -1,0 +1,92 @@
+#relacionado 
+"id" 		: "ID del tweet",
+*** "id_str" : *** RECIEN AGREGADO ***
+"source" 	: "De donde se publico: <a>Twitter for Mac</a>",
+"geo"		: "Lugar de realización del tweet",
+"place"		: "Lugar de respuesta",?
+"text"		: "Texto del tweettifunusd",
+"metadata"	: { 
+		#Datos del tweet
+        "iso_language_code"	: "Lenguaje (en,es,de,un)",
+        "result_type"		: "Tipo de Tweet(recent,hot,etc.)" [NO ESTA EN EL CSV]
+      }
+"retweet_count"	: "Veces retwiteeadas",
+"retweeted"		: "Si ha sido retwitteado",
+"coordinates"	: "Coordenadas donde se realizó el tweet",
+"favorited"		: "Tweet marcado como favorito (True, False)",
+"truncated"		: "Truncado al comienzo de la boigrafía (True, False)",
+"created_at"	: "Fecha de creación del tweet",
+"entities"		: {
+		#Objeto del tipo <Dictionary> con datos de URLs, hashtags, usuarios mencionados
+	"urls"		: "[ Links a videos, fotos, etc (Arreglo) ]" #arreglo
+	"hashtags"	: {
+		"text"		: "Arreglo de textos de hashtag"
+		"indices"	: "[valores de indices]"?
+	}
+	"user_mentions"	: "[arreglo de usuarios mencionados]"
+
+	media: **** RECIEN AGREGADO ***
+}
+#relacionado a la informacion del usuario
+"user" : {
+	"id"
+	"name"
+	"url" 			: "link del usuario"
+	"created_at"
+	"location"
+	"statuses_count"
+	"friends_count"
+	"following"
+	"screen_name"
+	"description"
+	"favoutrites_count" *** NO EXISTE ***
+	"lang"
+	"followers_count"
+	"time_zone"
+
+	"default_profile_image" : "booleano"
+	"profile_image_url"		: "url de la foto"
+	"profile_use_background_image" 	: "booleano"
+	"profile_background_image_url"	: "url del background"
+
+	"notifications"		: ""?
+
+	"entities" 	: {
+		#revisar ** USANDO EL MISMO QUE DE STATUS **
+		"url"
+		"expanded_url"
+		"url"
+		"indices"?
+	}
+
+	"descriptions"	: { *** VALOR NO SE PUEDE SACAR
+		#urls en la descripcion del usuario
+		"urls" : "[urls]"
+	}
+
+	#informacion complementaria
+}
+
+#relacionado a las replicas
+in_reply_to_user_id
+in_reply_to_user_id_str
+in_reply_to_status_id
+in_reply_to_status_id_str
+in_reply_to_screen_name
+
+
+FAVORITO_COUNT [NO DEBERIA VENIR, FALTA DEFINIR]
+
+
+
+
+
+
+
+
+
+
+
+
+
+

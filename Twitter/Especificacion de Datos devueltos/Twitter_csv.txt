@@ -1,0 +1,36 @@
+
+Especificacion
+
+id|id_str|source|geo|place|text|iso_language_code|retweet_count|retweeted|coordinates|favorited|favorite_count|truncated|created_at|urls|user_id|user|user_screen_name|user_url|user_profile_image_url|in_reply_to_user_id|in_reply_to_user_id_str|in_reply_to_status_id|in_reply_to_status_id_str|in_reply_to_screen_name
+
+id -> ID del Tweet
+id_str -> ID del tweet en string
+source -> De donde se publico el tweet (Faceboko,Instagram,etc)
+geo -> Ubicacion
+place -> Lugar
+text -> Texto del Tweet
+iso_language_code -> Leguage del tweet
+retweet_count -> Cantidad de retweets
+retweeted -> Si fue retweeteado
+coordinates -> Coordenadas del tweet
+favorited -> Si ha sido marcado como favorito
+favorite_count -> Cantidad de veces marcado como favorito
+truncated -> Si esta truncado al comienzo de la biografia
+created_at -> Cuando fue creado el tweet
+urls -> URLS!!DE!!VIDEOS!!SEPARADAS!!POR!!SIGNOS!!DE!!ADMIRACION
+user_id -> id del usuario que lo tweeteo
+user -> usuario
+user_screen_name -> nombre del usuario
+user_url -> url del usuario (propia website)
+user_profile_image_url -> link de la imagen de perfil del usuario
+in_reply_to_user_id -> id del usuario al que respondio
+in_reply_to_user_id_str -> id del usuario al que respondio en string
+in_reply_to_status_id -> id del post al que respondio
+in_reply_to_status_id_str -> id del post al que respondio en string
+in_reply_to_screen_name -> user del usuario al que respondio
+
+
+
+Ejemplo:
+
+511945717523709953|511945717523709953|Twitter Web Client|null|null|#MercadoLibre #Pouch #Kawasaki #FinaEstampa http://t.co/ggJJRowkYw|und|0|False|null|False|0|False|2014-09-16 18:32:25|http://goo.gl/OknU3C|157335553|mdc28|http://t.co/eDpZr4ilQP|http://pbs.twimg.com/profile_images/477902390138769408/N7bxURE6_normal.jpeg|None|None|None|None|None

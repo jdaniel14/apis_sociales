@@ -1,0 +1,350 @@
+
+
+# Especificación de Post Facebook
+# Algunos atributos pueden no estar presentes, como es el caso de story, el cual generalmente aparece con cambios de portada, creaciones de eventos, etc...
+
+# "name" : "generalmente aparece en la busqueda por hashtags, es el name del link que se comparte (por ejemplo, el nombre de un video, articulo,etc..."
+
+
+
+{ 
+	"picture": "link miniatura de la imagen del post.",  
+	"story" : "historis relatada del suceso (cambio de portada, etc...)"
+	"likes": 
+		{  
+			"paging": # Paginacion de los likes
+				{   
+					"cursors": 
+						{    
+							"after": "id despues",     
+							"before": "id antes"   
+						}  
+				},   
+			"data": # datos de los likes
+				[   
+					{    
+						"id": "id del usuario que likeo",     
+						"name": "nombre del usuario que likeo"   
+					}  
+				] 
+		},  
+	
+	"from": 
+		{  
+			"id": "id de quien escribio el post",   
+			"name": "nombre de quien escribio el post" 
+		},  
+	"comments": 
+		{  
+			"paging": # paginacion de comentarios
+				{   
+					"cursors": 
+						{    
+							"after": "id de despues",     
+							"before": "id de antes"   
+						}  
+				},   
+			"data": # datos de los coments
+				[   
+					{    
+						
+						"from": 
+							{     
+								"id": "id de quien comento",      
+								"name": "nombre de quien comento"    
+							},     
+						"like_count": cantidad de likes del comentario,     
+						"can_remove": si puede ser removido,     
+						"created_time": "fecha de creacion",     
+						"message": "mensaje en el comentario",     
+						"id": "id del comentario",     
+						"user_likes": si es que esta likeado   
+					},    
+					{    
+						...
+					},    
+				] 
+		},  
+	"object_id": "id del objeto",  
+	"message_tags": # personas taggeadas en el comentario
+		{  
+			"51": # indice
+				[   
+					{    
+						"length": longitud del comentado,     
+						"offset": offset,     
+						"type": "tipo de persona comentada (pagina, lugar, usuario, etc...)",     
+						"id": "id de quien fue tageado",     
+						"name": "nombre del usuario tageado"   
+					}  
+				],   
+			"37": 
+				[   
+					{    
+						...
+					}  
+				] 
+		},  
+	"privacy": # datos sobre la privacidad
+		{  
+			"deny": "si alguien esta denegado de verso",   
+			"description": "descripcion de quien puede ver",   
+			"value": "valor",   
+			"allow": "si alquien esta permitido",   
+			"friends": "amigos permitidos",   
+			"networks": "redes permitidas" 
+		},  
+	"actions": # acciones para comentar o likear. El de comment es el link al post
+		[  
+			{   
+				"link": "link para comentar",    
+				"name": "Comment"  
+			},   
+			{   
+				"link": "link para likear",    
+				"name": "Like"  
+			} 
+		],  
+	"properties": 
+		[  
+			{   
+				"text": "valor de la propiedad (2:15, ...)",    
+				"name": "nombre del atributo (duracion, tamaño, etc)"  
+			} 
+		],  
+	"to": # datos de a quien fue dirigdo
+		{  
+			"data": 
+				[   
+					{    
+						"id": "id del usuario al que se escribio",     
+						"name": "nombre del usuario al que se escribio"   
+					},    
+					{    
+						...
+					}  
+				] 
+		},  
+	"application": # datos de la aplicacion a traves del cual se hizo el post
+		{  
+			"namespace": "nombre de la aplicacion",   
+			"name": "nombre de los posteado",   
+			"id": "id de lo posteado" 
+		},  
+	"link": "link de lo posteado",  
+	"source": "link directo a lo contenido en el post",  
+	"shares": 
+		{  
+			"count": cantidad de veces compartido
+		},  
+	"created_time": "fecha creada",  
+	"message": "mensaje en el post",  
+	"updated_time": "ultima fecha de actualizacion (edicion)",  
+	"type": "tipo de post (video, foto, article, etc...)",  
+	"id": "id del post",  
+	"status_type": "tipo de status",  
+	"icon": "icono sobre la publicacion"
+}
+
+
+# Ejemplo de Post
+
+
+
+{ 
+	"picture": "https://fbcdn-vthumb-a.akamaihd.net/hvthumb-ak-xpa1/v/t15.0-10/1394669_799723393424129_799721620090973_19294_2172_b.
+				jpg?oh=ba80fe6d71bfbb043d8ddc61145aa689&oe=54B6740E&__gda__=1422651174_e6ac35227606c74bc159a16476815e87",  
+	"likes": 
+		{  
+			"paging": 
+				{   
+					"cursors": 
+						{    
+							"after": "MTMzNDgyMzk3Nw==",     
+							"before": "MTMzNDgyMzk3Nw=="   
+						}  
+				},   
+			"data": 
+				[   
+					{    
+						"id": "1334823977",     
+						"name": "Jose Astuvilca Fuster"   
+					}  
+				] 
+		},  
+	
+	"from": 
+		{  
+			"id": "795361023860366",   
+			"name": "Francisco V\u00edlchez Vargas" 
+		},  
+	"comments": 
+		{  
+			"paging": 
+				{   
+					"cursors": 
+						{    
+							"after": "NQ==",     
+							"before": "MQ=="   
+						}  
+				},   
+			"data": 
+				[   
+					{    
+						
+						"from": 
+							{     
+								"id": "795361023860366",      
+								"name": "Francisco V\u00edlchez Vargas"    
+							},     
+						"like_count": 0,     
+						"can_remove": true,     
+						"created_time": "2014-10-06T01:39:52+0000",     
+						"message": "probando comments :D",     
+						"id": "799721620090973_799725526757249",     
+						"user_likes": false   
+					},    
+					{    
+						"from": 
+							{     
+								"id": "795361023860366",      
+								"name": "Francisco V\u00edlchez Vargas"    
+							},     
+						"like_count": 1,     
+						"can_remove": true,     
+						"created_time": "2014-10-06T01:39:57+0000",     
+						"message": "comenta pofa",     
+						"id": "799721620090973_799725576757244",     "user_likes": true   
+					},    
+					{    
+						"from": 
+							{     
+								"id": "795361023860366",      
+								"name": "Francisco V\u00edlchez Vargas"    
+							},     
+						"like_count": 0,     
+						"can_remove": true,     
+						"created_time": "2014-10-06T01:40:07+0000",     
+						"message": "likea, pon links, etc",     "id": "799721620090973_799725633423905",     "user_likes": false   },    {    
+						"from": 
+							{     
+								"id": "795361023860366",      
+								"name": "Francisco V\u00edlchez Vargas"    
+							},     
+						"like_count": 0,     
+						"can_remove": true,     
+						"created_time": "2014-10-06T01:40:35+0000",     
+						"message": "",     
+						"id": "799721620090973_799725820090553",     
+						"user_likes": false   
+					},    
+					{    
+						"from": 
+							{     
+								"id": "795361023860366",      
+								"name": "Francisco V\u00edlchez Vargas"    
+							},     
+						"like_count": 0,     
+						"can_remove": true,     
+						"created_time": "2014-10-06T01:40:59+0000",     
+						"message": "la carla",     
+						"id": "799721620090973_799725970090538",     
+						"user_likes": false   
+					}  
+				] 
+		},  
+	"object_id": "799721620090973",  
+	"message_tags": 
+		{  
+			"51": 
+				[   
+					{    
+						"length": 21,     
+						"offset": 51,     
+						"type": "user",     
+						"id": "1334823977",     
+						"name": "Jose Astuvilca Fuster"   
+					}  
+				],   
+			"37": 
+				[   
+					{    
+						"length": 13,     
+						"offset": 37,     
+						"type": "user",     
+						"id": "1327516116",     
+						"name": "Christy Mu\u00f1oz"   
+					}  
+				] 
+		},  
+	"privacy": 
+		{  
+			"deny": "",   
+			"description": "Only Me",   
+			"value": "SELF",   
+			"allow": "",   
+			"friends": "",   
+			"networks": "" 
+		},  
+	"actions": 
+		[  
+			{   
+				"link": "https://www.facebook.com/795361023860366/posts/799721620090973",    
+				"name": "Comment"  
+			},   
+			{   
+				"link": "https://www.facebook.com/795361023860366/posts/799721620090973",    
+				"name": "Like"  
+			} 
+		],  
+	"properties": 
+		[  
+			{   
+				"text": "2:15",    
+				"name": "Length"  
+			} 
+		],  
+	"to": 
+		{  
+			"data": 
+				[   
+					{    
+						"id": "1327516116",     
+						"name": "Christy Mu\u00f1oz"   
+					},    
+					{    
+						"id": "1334823977",     
+						"name": "Jose Astuvilca Fuster"   
+					}  
+				] 
+		},  
+	"application": 
+		{  
+			"namespace": "video",   
+			"name": "Video",   
+			"id": "2392950137" 
+		},  
+	"link": "https://www.facebook.com/video.php?v=799721620090973",  
+	"source": "https://scontent-a.xx.fbcdn.net/hvideo-xap1/v/t42.1790-2/10672501_799723363424132_1083930387_n.
+				mp4?oh=69eae72cd1a6bf499bf37b33754aec72&oe=5433F784",  
+	"shares": 
+		{  
+			"count": 1 
+		},  
+	"created_time": "2014-10-06T01:34:23+0000",  
+	"message": "#tag1 #tag2 palabras bla bla bla bla Christy Mu\u00f1oz Jose Astuvilca Fuster tweepy links http://www.youtube.com/watch?v=p8YPgcIKufE http
+				://elcomercio.pe/elecciones-2014/",  
+	"updated_time": "2014-10-06T01:40:59+0000",  
+	"type": "video",  
+	"id": "795361023860366_799721620090973",  
+	"status_type": "added_video",  
+	"icon": "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/DggDhA4z4tO.gif"
+}
+
+
+# Mismo Post
+
+
+{ "picture": "https://fbcdn-vthumb-a.akamaihd.net/hvthumb-ak-xpa1/v/t15.0-10/1394669_799723393424129_799721620090973_19294_2172_b.jpg?oh=ba80fe6d71bfbb043d8ddc61145aa689&oe=54B6740E&__gda__=1422651174_e6ac35227606c74bc159a16476815e87",  "likes": {  "paging": {   "cursors": {    "after": "MTMzNDgyMzk3Nw==",     "before": "MTMzNDgyMzk3Nw=="   }  },   "data": [   {    "id": "1334823977",     "name": "Jose Astuvilca Fuster"   }  ] },  "from": {  "id": "795361023860366",   "name": "Francisco V\u00edlchez Vargas" },  "comments": {  "paging": {   "cursors": {    "after": "NQ==",     "before": "MQ=="   }  },   "data": [   {    "from": {     "id": "795361023860366",      "name": "Francisco V\u00edlchez Vargas"    },     "like_count": 0,     "can_remove": true,     "created_time": "2014-10-06T01:39:52+0000",     "message": "probando comments :D",     "id": "799721620090973_799725526757249",     "user_likes": false   },    {    "from": {     "id": "795361023860366",      "name": "Francisco V\u00edlchez Vargas"    },     "like_count": 1,     "can_remove": true,     "created_time": "2014-10-06T01:39:57+0000",     "message": "comenta pofa",     "id": "799721620090973_799725576757244",     "user_likes": true   },    {    "from": {     "id": "795361023860366",      "name": "Francisco V\u00edlchez Vargas"    },     "like_count": 0,     "can_remove": true,     "created_time": "2014-10-06T01:40:07+0000",     "message": "likea, pon links, etc",     "id": "799721620090973_799725633423905",     "user_likes": false   },    {    "from": {     "id": "795361023860366",      "name": "Francisco V\u00edlchez Vargas"    },     "like_count": 0,     "can_remove": true,     "created_time": "2014-10-06T01:40:35+0000",     "message": "",     "id": "799721620090973_799725820090553",     "user_likes": false   },    {    "from": {     "id": "795361023860366",      "name": "Francisco V\u00edlchez Vargas"    },     "like_count": 0,     "can_remove": true,     "created_time": "2014-10-06T01:40:59+0000",     "message": "la carla",     "id": "799721620090973_799725970090538",     "user_likes": false   }  ] },  "object_id": "799721620090973",  "message_tags": {  "51": [   {    "length": 21,     "offset": 51,     "type": "user",     "id": "1334823977",     "name": "Jose Astuvilca Fuster"   }  ],   "37": [   {    "length": 13,     "offset": 37,     "type": "user",     "id": "1327516116",     "name": "Christy Mu\u00f1oz"   }  ] },  "privacy": {  "deny": "",   "description": "Only Me",   "value": "SELF",   "allow": "",   "friends": "",   "networks": "" },  "actions": [  {   "link": "https://www.facebook.com/795361023860366/posts/799721620090973",    "name": "Comment"  },   {   "link": "https://www.facebook.com/795361023860366/posts/799721620090973",    "name": "Like"  } ],  "properties": [  {   "text": "2:15",    "name": "Length"  } ],  "to": {  "data": [   {    "id": "1327516116",     "name": "Christy Mu\u00f1oz"   },    {    "id": "1334823977",     "name": "Jose Astuvilca Fuster"   }  ] },  "application": {  "namespace": "video",   "name": "Video",   "id": "2392950137" },  "link": "https://www.facebook.com/video.php?v=799721620090973",  "source": "https://scontent-a.xx.fbcdn.net/hvideo-xap1/v/t42.1790-2/10672501_799723363424132_1083930387_n.mp4?oh=69eae72cd1a6bf499bf37b33754aec72&oe=5433F784",  "shares": {  "count": 1 },  "created_time": "2014-10-06T01:34:23+0000",  "message": "#tag1 #tag2 palabras bla bla bla bla Christy Mu\u00f1oz Jose Astuvilca Fuster tweepy links http://www.youtube.com/watch?v=p8YPgcIKufE http://elcomercio.pe/elecciones-2014/",  "updated_time": "2014-10-06T01:40:59+0000",  "type": "video",  "id": "795361023860366_799721620090973",  "status_type": "added_video",  "icon": "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/DggDhA4z4tO.gif"}
+
+

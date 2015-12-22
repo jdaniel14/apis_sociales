@@ -1,0 +1,53 @@
+
+Especificacion:
+
+tags|user_id|user_username|user_screen_name|user_profile_image_url|videolow|videostd|imagelow|imagestd|link|created_at|text|caption_id|type|id|likes_count
+
+tags -> Lista!!de!!tags!!separados
+user_id -> ID del usuario que hizo el post
+user_username -> user del usuario
+user_screen_name -> nombre del usuario
+user_profile_image_url -> link de la imagen de perfil del usuario
+videolow -> video (si es que se posteo) en baja calidad
+videostd -> video (si es que se posteo) en calidad standard
+imagelow -> imagen en baja calidad
+imagestd -> imagen en calidad standard
+link -> link del post
+created_at -> fecha de creacion del post
+text -> texto del post
+caption_id -> id del caption del post
+type -> tipo de post (photo,video)
+id -> id del post
+likes_count -> cantidad de likes
+
+
+
+
+Ejemplo:
+
+
+
+tags -> funny!!polloalabrasa!!igersperu!!peru!!pardoschicken!!dancingchicken!!bestoftheday!!wtf!!chicken!!pardos
+user_id -> 314777781
+user_username -> uchicch
+user_screen_name -> nombre del usuario
+user_profile_image_url -> http://images.ak.instagram.com/profiles/profile_314777781_75sq_1372084971.jpg
+videolow -> http://scontent-b.cdninstagram.com/hphotos-xaf1/t50.2886-16/10669569_1461319097477171_735438029_s.mp4
+videostd -> http://scontent-a.cdninstagram.com/hphotos-xaf1/t50.2886-16/10678530_656936314404230_436131569_n.mp4
+imagelow -> http://scontent-b.cdninstagram.com/hphotos-prn/t51.2885-15/929205_1393752397533274_1348181531_a.jpg
+imagestd -> http://scontent-b.cdninstagram.com/hphotos-prn/t51.2885-15/929205_1393752397533274_1348181531_n.jpg
+link -> http://instagram.com/p/sbUOHuq3v9/
+created_at -> 2014-09-02 02:44:33
+text -> El Pollo. El goza.
+caption_id -> 800322290627344672
+type -> video
+id -> 800322290090474493_314777781
+likes_count -> 4
+
+
+
+
+
+
+funny!!polloalabrasa!!igersperu!!peru!!pardoschicken!!dancingchicken!!bestoftheday!!wtf!!chicken!!pardos|314777781|uchicch|http://images.ak.instagram.com/profiles/profile_314777781_75sq_1372084971.jpg|http://scontent-b.cdninstagram.com/hphotos-xaf1/t50.2886-16/10669569_1461319097477171_735438029_s.mp4|http://scontent-a.cdninstagram.com/hphotos-xaf1/t50.2886-16/10678530_656936314404230_436131569_n.mp4|http://scontent-b.cdninstagram.com/hphotos-prn/t51.2885-15/929205_1393752397533274_1348181531_a.jpg|http://scontent-b.cdninstagram.com/hphotos-prn/t51.2885-15/929205_1393752397533274_1348181531_n.jpg|http://instagram.com/p/sbUOHuq3v9/|2014-09-02 02:44:33|El Pollo. El goza.|800322290627344672|video|800322290090474493_314777781|4
+

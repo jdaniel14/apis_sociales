@@ -1,0 +1,184 @@
+Especificacion
+
+
+{
+	"coordinates": "Coordenadas donde se realizó el tweet",
+	"created_at": "Fecha de creación del tweet", 
+	"entities": 
+		{	
+			"hashtags": 
+				[
+					{
+						"text":"Texto del Hashtag"
+					}
+				], 
+			"media": 
+				[
+					{
+						"display_url":"URL que se muestra en el post"
+						"expanded_url":"Expandida"
+						"id":"Id del media"
+						"id_str":"ID en string"
+						"media_url":"URL del media"
+						"type":"photo,video,etc"
+						"url":"URL comprimida por Twitter"
+					}
+				], 
+			"urls": 
+				[
+					{
+						"display_url":"URL que se muestra en el post"
+						"expanded_url":"Expandida"
+						"url":"URL comprimida por Twitter"
+					}
+				], 
+			"user_mentions": 
+				[
+					{
+						"id": ID del Usuario,
+					 	"id_str": "ID en String", 
+					 	"name": "Nombre del usuario",
+					 	"screen_name": "usuario (como con el que se logea)"
+					 }
+				]
+		},
+	"favorite_count": Cantidad e veces favoriteado,
+	"favorited": Si ha sido favoriteado,
+	"geo": "Ubicacion",
+	"id": ID del post, 
+	"id_str": "ID del post en string", 
+	"in_reply_to_screen_name": "En respuesta a que usuario_screen_name fue el post", 
+	"in_reply_to_status_id": ID del post al que se respondio, 
+	"in_reply_to_status_id_str": "ID del post al que se respondio en string", 
+	"in_reply_to_user_id": ID del usuario al que se respondio, 
+	"in_reply_to_user_id_str": "ID del usuario al que se respondio en string", 
+	"metadata": 
+		{
+			"iso_language_code": "Lenguaje",
+			"result_type": "Tipo de resultado"
+		},
+	"place": "Lugar donde se realizo",
+	"retweet_count": #veces retwitteado, 
+	"retweeted": Si fue retwiteado (True,False), 
+	"source": "De donde fue posteado(Twitter, Instagram, Facebook)", 
+	"text": "El Texto del post", 
+	"truncated": Si es que esta truncado al comienzo del muro del usuario, 
+	"user": --Datos del usuario que realizo el post
+		{
+			"created_at": "Fecha de creacion de la cuenta", 
+			"default_profile_image": Imagen por defecto, 
+			"description": "Decripcion del usuario", 
+			"entities": -- Mismos campos que el entitie descrito anteriormente
+				{
+					"hashtags": [],
+					"media": [], 
+					"urls": [], 
+					"user_mentions": []
+				},
+			"followers_count": Cantidad de seguidores,
+			"following": Si se esta siguiendo(true,false), 
+			"friends_count": Cantidad de amigos, 
+			"geo_enabled": Si tiene habilidado geolocalizacion (true,false), 
+			"id": ID del usuario, 
+			"lang": "Leguanje", 
+			"location": "Ubicacion", 
+			"name": "Nombre", 
+			"notifications": Notificaciones activas, 
+			"profile_background_image_url": "Imagen de fondo", 
+			"profile_image_url": "Imagen de perfil", 
+			"profile_use_background_image": Si tiene imagen de fondo(true,false), 
+			"protected": Si es cuenta protegida, 
+			"screen_name": "user", 
+			"statuses_count": Cantidad de tweets, 
+			"time_zone": "Luegar del timezone", 
+			"url": Alguna url que puso como su sitio web, 
+			"utc_offset": Diferencia UTC (-18000), 
+			"verified": Si es cuenta verificada
+		}
+}
+
+
+
+
+
+
+
+Ejemplo
+
+
+{
+	"coordinates": "null",
+	"created_at": "2014-09-04 16:24:53", 
+	"entities": 
+		{	
+			"hashtags": [], 
+			"media": [], 
+			"urls": [], 
+			"user_mentions": 
+				[
+					{
+						"id": 417379410,
+					 	"id_str": "417379410", 
+					 	"name": "Christy Mu\u00f1oz ",
+					 	"screen_name": "Christy080995"
+					 }
+				]
+		},
+	"favorite_count": 1,
+	"favorited": false,
+	"geo": "null",
+	"id": 507564971178590208, 
+	"id_str": "507564971178590208", 
+	"in_reply_to_screen_name": "Christy080995", 
+	"in_reply_to_status_id": 504087023066841088, 
+	"in_reply_to_status_id_str": "504087023066841088", 
+	"in_reply_to_user_id": 417379410, 
+	"in_reply_to_user_id_str": "417379410", 
+	"metadata": 
+		{
+			"iso_language_code": "de",
+			"result_type": ""
+		},
+	"place": "null",
+	"retweet_count": 0, 
+	"retweeted": false, 
+	"source": "Twitter Web Client", 
+	"text": "@Christy080995 wilchess26 mas naik nunca estudia", 
+	"truncated": false, 
+	"user": 
+		{
+			"created_at": "2011-10-19 03:49:18", 
+			"default_profile_image": false, 
+			"description": "", 
+			"entities": 
+				{
+					"hashtags": [],
+					"media": [], 
+					"urls": [], 
+					"user_mentions": []
+				},
+			"followers_count": 9,
+			"following": false, 
+			"friends_count": 40, 
+			"geo_enabled": true, 
+			"id": 393819808, 
+			"lang": "es", 
+			"location": "", 
+			"name": "Francisco V\u00edlchez", 
+			"notifications": false, 
+			"profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", 
+			"profile_image_url": "http://pbs.twimg.com/profile_images/3527411732/6cbc17c354f0dd985cf4f1c53b1a9ab8_normal.jpeg", 
+			"profile_use_background_image": true, 
+			"protected": false, 
+			"screen_name": "wilchess26", 
+			"statuses_count": 13, 
+			"time_zone": "Bogota", 
+			"url": null, 
+			"utc_offset": -18000, 
+			"verified": false
+		}
+}
+
+En una sola linea:
+
+{"coordinates": "null", "created_at": "2014-09-04 16:24:53", "entities": {"hashtags": [], "media": [], "urls": [], "user_mentions": [{"id": 417379410, "id_str": "417379410", "name": "Christy Mu\u00f1oz ", "screen_name": "Christy080995"}]}, "favorite_count": 1, "favorited": false, "geo": "null", "id": 507564971178590208, "id_str": "507564971178590208", "in_reply_to_screen_name": "Christy080995", "in_reply_to_status_id": 504087023066841088, "in_reply_to_status_id_str": "504087023066841088", "in_reply_to_user_id": 417379410, "in_reply_to_user_id_str": "417379410", "metadata": {"iso_language_code": "de", "result_type": ""}, "place": "null", "retweet_count": 0, "retweeted": false, "source": "Twitter Web Client", "text": "@Christy080995 wilchess26 mas naik nunca estudia", "truncated": false, "user": {"created_at": "2011-10-19 03:49:18", "default_profile_image": false, "description": "", "entities": {"hashtags": [], "media": [], "urls": [], "user_mentions": []}, "followers_count": 9, "following": false, "friends_count": 40, "geo_enabled": true, "id": 393819808, "lang": "es", "location": "", "name": "Francisco V\u00edlchez", "notifications": false, "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", "profile_image_url": "http://pbs.twimg.com/profile_images/3527411732/6cbc17c354f0dd985cf4f1c53b1a9ab8_normal.jpeg", "profile_use_background_image": true, "protected": false, "screen_name": "wilchess26", "statuses_count": 13, "time_zone": "Bogota", "url": null, "utc_offset": -18000, "verified": false}}

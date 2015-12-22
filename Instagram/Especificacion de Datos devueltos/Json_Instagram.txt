@@ -1,0 +1,338 @@
+
+Especificación:
+
+
+{
+	"user_has_liked": Si el usuario ha likeado su foto,
+	"attribution": "Campo no utilizable", 
+	"videos": -- Este campo existe si es post de video. Hay links para el video en distintas calidades
+		{
+			"low_bandwidth":
+				{
+					"url": "Link del video", 
+					"width": Ancho, 
+					"height": Alto
+				}, 
+			"standard_resolution": 
+				{
+					"url": "Link del video", 
+					"width": Ancho, 
+					"height": Alto
+				}, 
+			"low_resolution": 
+				{
+					"url": "Link del video", 
+					"width": Ancho, 
+					"height": Alto
+				}
+		}, 
+	"tags": 
+		[
+			"Arreglo", 
+			"de", 
+			"Tags", 
+			"Utilizados", 
+			"En", 
+			"Post",
+			"Y",
+			"Comments"
+		], 
+	"user": -- Datos del usuario que realizo el post
+		{
+			"username": "user", 
+			"website": "Website personal", 
+			"bio": "Descripcion del usuario", 
+			"profile_picture": "Link de la foto de perfil", 
+			"full_name": "Nombre", 
+			"id": "ID del usuario"
+		}, 
+	"comments": -- Comentarios realizados al post (no siempre devuelve todos, incluse a veces ninguno (depende de privacidad))
+		{
+			"count": Cantidad de comements, 
+			"data": -- Lista de Comments
+				[
+					{
+						"created_time": "Fecha de comentada", 
+						"text": "Texto del comment", 
+						"from": -- Datos del usuario que comento
+							{
+								"username": "user", 
+								"profile_picture": "Link de la foto de perfil", 
+								"id": "ID del usuario", 
+								"full_name": "Nombre"
+							}, 
+						"id": "ID del comment"
+					}
+				]
+		}, 
+	"filter": "Filtro usado en la foto", 
+	"images": -- La imagen en distintas calidades. Si es un video, aca esta la imagen inicial que se muestra
+		{
+			"low_resolution": 
+				{
+					"url": "Link de la imagen", 
+					"width": Ancho, 
+					"height": Alto
+				}, 
+			"thumbnail": 
+				{
+					"url": "Link de la imagen", 
+					"width": Ancho, 
+					"height": Alto
+				}, 
+			"standard_resolution": 
+				{
+					"url": "Link de la imagen", 
+					"width": Ancho, 
+					"height": Alto
+				}
+		}, 
+	"link": "Lisnk del post", 
+	"location": 
+		{
+			"latitude": latitud,
+			"longitude": longitud
+		}, 
+	"created_time": "Fecha de creacion", 
+	"users_in_photo": -- Usuarios taggeados en la foto
+		[
+			{
+				"position": 
+					{
+						"y": Posicion y del tag en la foto, 
+						"x": Posicion x del tag en la foto
+					}, 
+				"user": -- Datos del usuario taggeado
+					{
+						"username": "user", 
+						"profile_picture": "Link de la foto de perfil del usuario", 
+						"id": "Id del usuario", 
+						"full_name": "Nombre del usuario"
+					}
+			}
+		],
+	"caption": 
+		{
+			"created_time": "Fecha de creacion", 
+			"text": "Texto del post", 
+			"from": -- Repite nuevamente los datos del usuario que lo posteo
+				{
+					"username": "user", 
+					"profile_picture": "link de su foto de perfil, 
+					"id": "id del usuario", 
+					"full_name": "nombre"
+				}, 
+			"id": "id del caption"
+		}, 
+		"type": "Tipo de post (video,foto)", 
+		"id": "ID del post", 
+		"likes": 
+			{
+				"count": Cantidad de likes, 
+				"data": -- Lista de usuarios que hicieron el like
+					[
+						{
+							"username": "user", 
+							"profile_picture": "link de su foto de perfil", 
+							"id": "id del usuario", 
+							"full_name": "nombre"
+						}
+					]
+			}
+}
+
+
+
+
+
+
+
+Ejemplo:
+
+
+
+
+
+
+{
+	"user_has_liked": false,
+	"attribution": null, 
+	"videos": 
+		{
+			"low_bandwidth":
+				{
+					"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t50.2886-16/10709121_682111045206633_2110420970_s.mp4", 
+					"width": 480, 
+					"height": 480
+				}, 
+			"standard_resolution": 
+				{
+					"url": "http://scontent-b.cdninstagram.com/hphotos-xfp1/t50.2886-16/10267209_816619411692425_1005996069_n.mp4", 
+					"width": 640, 
+					"height": 640
+				}, 
+			"low_resolution": 
+				{
+					"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t50.2886-16/10709121_682111045206633_2110420970_s.mp4", 
+					"width": 480, 
+					"height": 480
+				}
+		}, 
+	"tags": 
+		[
+			"notboring", 
+			"sandinmybutt", 
+			"peru", 
+			"sandboarding", 
+			"superrad", 
+			"zing"
+		], 
+	"user": 
+		{
+			"username": "bizz716", 
+			"website": "", 
+			"bio": "", 
+			"profile_picture": "http://images.ak.instagram.com/profiles/profile_1351585_75sq_1328150218.jpg", 
+			"full_name": "bizz716", 
+			"id": "1351585"
+		}, 
+	"comments": 
+		{
+			"count": 2, 
+			"data": 
+				[
+					{
+						"created_time": "1411016044", 
+						"text": "@travelyourfaceoff", 
+						"from": 
+							{
+								"username": "bizz716", 
+								"profile_picture": "http://images.ak.instagram.com/profiles/profile_1351585_75sq_1328150218.jpg", 
+								"id": "1351585", 
+								"full_name": "bizz716"
+							}, 
+						"id": "811983891557042691"
+					}, 
+					{
+						"created_time": "1411016508", 
+						"text": "Yes",
+						"from": 
+							{
+								"username": "jcreasey", 
+								"profile_picture": "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10597246_1514015355479595_779861326_a.jpg", 
+								"id": "4825068", 
+								"full_name": "John Creasey"
+							}, 
+						"id": "811987782889687718"
+					}
+				]
+		}, 
+	"filter": "Normal", 
+	"images": 
+		{
+			"low_resolution": 
+				{
+					"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t51.2885-15/10683978_1508126322764814_463741068_a.jpg", 
+					"width": 306, 
+					"height": 306
+				}, 
+			"thumbnail": 
+				{
+					"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t51.2885-15/10683978_1508126322764814_463741068_s.jpg", 
+					"width": 150, 
+					"height": 150
+				}, 
+			"standard_resolution": 
+				{
+					"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t51.2885-15/10683978_1508126322764814_463741068_n.jpg", 
+					"width": 640, 
+					"height": 640
+				}
+		}, 
+	"link": "http://instagram.com/p/tEvT71mMs9/", 
+	"location": 
+		{
+			"latitude": 33.455813262, 
+			"longitude": -111.900169468
+		}, 
+	"created_time": "1411015808", 
+	"users_in_photo": 
+		[
+			{
+				"position": 
+					{
+						"y": 0.9234375, 
+						"x": 0.70625
+					}, 
+				"user": 
+					{
+						"username": "loracarola", 
+						"profile_picture": "http://images.ak.instagram.com/profiles/profile_487760_75sq_1361049785.jpg", 
+						"id": "487760", 
+						"full_name": "carolina dieckmann"
+					}
+			}
+		], 
+	"caption": 
+		{
+			"created_time": "1411015808", 
+			"text": "Go pro stick shot sandboarding in Peru..Sick!! Only took me a month to figure out how to post on IG. Lol. #sandboarding #peru 				#superrad #sandinmybutt #notboring #zing", 
+			"from": 
+				{
+					"username": "bizz716", 
+					"profile_picture": 
+					"http://images.ak.instagram.com/profiles/profile_1351585_75sq_1328150218.jpg", 
+					"id": "1351585", 
+					"full_name": "bizz716"
+				}, 
+			"id": "811981911409346989"
+		}, 
+		"type": "video", 
+		"id": "811981910939585341_1351585", 
+		"likes": 
+			{
+				"count": 5, 
+				"data": 
+					[
+						{
+							"username": "bjanca87", 
+							"profile_picture": "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10665510_671881319575571_2011607757_a.jpg", 
+							"id": "177436208", 
+							"full_name": "Bianca Torres"
+						}, 
+						{
+							"username": "rocioc_", 
+							"profile_picture": "http://photos-e.ak.instagram.com/hphotos-ak-xpa1/925969_589597847817964_86414256_a.jpg", 
+							"id": "55833297", 
+							"full_name": "Maria Rocio"
+						}, 
+						{
+							"username": "jcreasey", 
+							"profile_picture": "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10597246_1514015355479595_779861326_a.jpg", 
+							"id": "4825068", 
+							"full_name": "John Creasey"
+						}, 
+						{
+							"username": "krisfinny", 
+							"profile_picture": "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10616916_356994237786427_1293557222_a.jpg", 
+							"id": "18182961", 
+							"full_name": "Kristen Finnegan"
+						}
+					]
+			}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{"user_has_liked": false, "attribution": null, "videos": {"low_bandwidth": {"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t50.2886-16/10709121_682111045206633_2110420970_s.mp4", "width": 480, "height": 480}, "standard_resolution": {"url": "http://scontent-b.cdninstagram.com/hphotos-xfp1/t50.2886-16/10267209_816619411692425_1005996069_n.mp4", "width": 640, "height": 640}, "low_resolution": {"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t50.2886-16/10709121_682111045206633_2110420970_s.mp4", "width": 480, "height": 480}}, "tags": ["notboring", "sandinmybutt", "peru", "sandboarding", "superrad", "zing"], "user": {"username": "bizz716", "website": "", "bio": "", "profile_picture": "http://images.ak.instagram.com/profiles/profile_1351585_75sq_1328150218.jpg", "full_name": "bizz716", "id": "1351585"}, "comments": {"count": 2, "data": [{"created_time": "1411016044", "text": "@travelyourfaceoff", "from": {"username": "bizz716", "profile_picture": "http://images.ak.instagram.com/profiles/profile_1351585_75sq_1328150218.jpg", "id": "1351585", "full_name": "bizz716"}, "id": "811983891557042691"}, {"created_time": "1411016508", "text": "Yes", "from": {"username": "jcreasey", "profile_picture": "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10597246_1514015355479595_779861326_a.jpg", "id": "4825068", "full_name": "John Creasey"}, "id": "811987782889687718"}]}, "filter": "Normal", "images": {"low_resolution": {"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t51.2885-15/10683978_1508126322764814_463741068_a.jpg", "width": 306, "height": 306}, "thumbnail": {"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t51.2885-15/10683978_1508126322764814_463741068_s.jpg", "width": 150, "height": 150}, "standard_resolution": {"url": "http://scontent-a.cdninstagram.com/hphotos-xaf1/t51.2885-15/10683978_1508126322764814_463741068_n.jpg", "width": 640, "height": 640}}, "link": "http://instagram.com/p/tEvT71mMs9/", "location": {"latitude": 33.455813262, "longitude": -111.900169468}, "created_time": "1411015808", "users_in_photo": [], "caption": {"created_time": "1411015808", "text": "Go pro stick shot sandboarding in Peru..Sick!! Only took me a month to figure out how to post on IG. Lol. #sandboarding #peru #superrad #sandinmybutt #notboring #zing", "from": {"username": "bizz716", "profile_picture": "http://images.ak.instagram.com/profiles/profile_1351585_75sq_1328150218.jpg", "id": "1351585", "full_name": "bizz716"}, "id": "811981911409346989"}, "type": "video", "id": "811981910939585341_1351585", "likes": {"count": 5, "data": [{"username": "bjanca87", "profile_picture": "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10665510_671881319575571_2011607757_a.jpg", "id": "177436208", "full_name": "Bianca Torres"}, {"username": "rocioc_", "profile_picture": "http://photos-e.ak.instagram.com/hphotos-ak-xpa1/925969_589597847817964_86414256_a.jpg", "id": "55833297", "full_name": "Maria Rocio"}, {"username": "jcreasey", "profile_picture": "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10597246_1514015355479595_779861326_a.jpg", "id": "4825068", "full_name": "John Creasey"}, {"username": "krisfinny", "profile_picture": "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10616916_356994237786427_1293557222_a.jpg", "id": "18182961", "full_name": "Kristen Finnegan"}]}}
